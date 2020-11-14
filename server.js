@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
             description: 'test description2'
         },
     ]
-    res.render('index', {articles});
+    res.render('articles/index', {articles});
 })
 
 
