@@ -12,6 +12,17 @@
     <section class="container">
         <h1 class="mb-4">Blog Articles</h1>
         <a class="btn btn-success" href="/articles/new">New Article</a>
+        <% articles.forEach(article => { %>
+        <article class="card mt-4">
+            <div class="card-body">
+                <h4 class="card-title"><%= article.title %></h4>
+                <div class="card-subtitle text-muted mb-2">
+                    <%= article.date.toLocaleDateString() %>
+                </div>
+                <div class="card-text mb-2"><%= article.description %></div>
+            </div>
+        </article> <%
+        }) %>
     </section>
 </body>
 </html>
